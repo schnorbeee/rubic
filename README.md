@@ -74,4 +74,10 @@ http://localhost:8080/swagger-ui/index.html
               S, P = 3 (4, 8, 9)          &&      P, S = 1 (7)
               Z, K = 3 (4, 8, 9)          &&      K, Z = 1 (7)
 
+### Sonar qube results
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
 I hope it will be fine.
