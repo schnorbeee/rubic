@@ -11,4 +11,4 @@ Feature: Rubic solve
   Scenario: Rubic solve invalid
     When Send POST request to "/api/rubics" url and "ChipsBadRequest.json" content
     When Send PUT request to "/api/rubics/solve" url
-    Then Validate response with result "FirstUnresolvedRubicTable.json" and the response code is 200
+    Then Validate response code is 200

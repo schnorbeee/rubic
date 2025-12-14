@@ -60,4 +60,9 @@ public class GeneralSteps {
                 response.getValue().getBody().asString(),
                 file);
     }
+
+    @Then("Validate response code is {int}")
+    public void validateResponseCodeIs(int statusCode) {
+        assertThat(response.getValue().getStatusCode(), equalTo(statusCode));
+    }
 }

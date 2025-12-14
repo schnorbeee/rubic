@@ -1,84 +1,84 @@
 {
   "firstChipSides": {
     "1": {
-      "leftColor": "KEK",
-      "rightColor": "ZOLD"
-    },
-    "2": {
-      "leftColor": "PIROS",
-      "rightColor": "ZOLD"
-    },
-    "3": {
       "leftColor": "SARGA",
       "rightColor": "KEK"
     },
+    "2": {
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
+    },
+    "3": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
     "4": {
       "leftColor": "PIROS",
-      "rightColor": "SARGA"
+      "rightColor": "ZOLD"
     }
   },
   "secondChipSides": {
     "1": {
-      "leftColor": "KEK",
-      "rightColor": "SARGA"
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
     },
     "2": {
+      "leftColor": "KEK",
+      "rightColor": "PIROS"
+    },
+    "3": {
       "leftColor": "ZOLD",
       "rightColor": "SARGA"
     },
-    "3": {
-      "leftColor": "PIROS",
-      "rightColor": "KEK"
-    },
     "4": {
-      "leftColor": "ZOLD",
-      "rightColor": "PIROS"
+      "leftColor": "KEK",
+      "rightColor": "SARGA"
     }
   },
   "thirdChipSides": {
     "1": {
-      "leftColor": "KEK",
-      "rightColor": "ZOLD"
+      "leftColor": "ZOLD",
+      "rightColor": "PIROS"
     },
     "2": {
       "leftColor": "SARGA",
-      "rightColor": "ZOLD"
-    },
-    "3": {
-      "leftColor": "PIROS",
       "rightColor": "KEK"
     },
+    "3": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
     "4": {
-      "leftColor": "SARGA",
+      "leftColor": "KEK",
       "rightColor": "PIROS"
     }
   },
   "fourthChipSides": {
     "1": {
-      "leftColor": "KEK",
-      "rightColor": "SARGA"
+      "leftColor": "SARGA",
+      "rightColor": "ZOLD"
     },
     "2": {
-      "leftColor": "ZOLD",
+      "leftColor": "KEK",
       "rightColor": "PIROS"
     },
     "3": {
-      "leftColor": "KEK",
-      "rightColor": "ZOLD"
+      "leftColor": "SARGA",
+      "rightColor": "PIROS"
     },
     "4": {
-      "leftColor": "PIROS",
-      "rightColor": "SARGA"
+      "leftColor": "ZOLD",
+      "rightColor": "KEK"
     }
   },
   "fifthChipSides": {
     "1": {
-      "leftColor": "KEK",
-      "rightColor": "PIROS"
+      "leftColor": "SARGA",
+      "rightColor": "ZOLD"
     },
     "2": {
-      "leftColor": "ZOLD",
-      "rightColor": "SARGA"
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
     },
     "3": {
       "leftColor": "KEK",
@@ -86,43 +86,43 @@
     },
     "4": {
       "leftColor": "PIROS",
-      "rightColor": "ZOLD"
+      "rightColor": "KEK"
     }
   },
   "sixthChipSides": {
     "1": {
-      "leftColor": "KEK",
+      "leftColor": "SARGA",
       "rightColor": "ZOLD"
     },
     "2": {
-      "leftColor": "SARGA",
-      "rightColor": "PIROS"
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
     },
     "3": {
-      "leftColor": "KEK",
-      "rightColor": "SARGA"
+      "leftColor": "SARGA",
+      "rightColor": "KEK"
     },
     "4": {
-      "leftColor": "PIROS",
-      "rightColor": "ZOLD"
+      "leftColor": "ZOLD",
+      "rightColor": "PIROS"
     }
   },
   "seventhChipSides": {
     "1": {
-      "leftColor": "ZOLD",
-      "rightColor": "KEK"
-    },
-    "2": {
       "leftColor": "PIROS",
       "rightColor": "SARGA"
     },
+    "2": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
     "3": {
-      "leftColor": "ZOLD",
-      "rightColor": "SARGA"
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
     },
     "4": {
-      "leftColor": "KEK",
-      "rightColor": "PIROS"
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
     }
   },
   "eighthChipSides": {
@@ -145,20 +145,20 @@
   },
   "ninthChipSides": {
     "1": {
-      "leftColor": "ZOLD",
+      "leftColor": "KEK",
       "rightColor": "SARGA"
     },
     "2": {
-      "leftColor": "PIROS",
-      "rightColor": "SARGA"
+      "leftColor": "ZOLD",
+      "rightColor": "KEK"
     },
     "3": {
-      "leftColor": "KEK",
-      "rightColor": "ZOLD"
+      "leftColor": "SARGA",
+      "rightColor": "PIROS"
     },
     "4": {
-      "leftColor": "PIROS",
-      "rightColor": "KEK"
+      "leftColor": "ZOLD",
+      "rightColor": "PIROS"
     }
   }
 }
