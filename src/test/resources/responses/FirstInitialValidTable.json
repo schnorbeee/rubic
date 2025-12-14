@@ -1,0 +1,168 @@
+{
+  "gameId": 1,
+  "table": "-------------------------------------------------------------------------------\n|         KéééK,ZöölD      |      KéééK,SárgA      |      KéééK,ZöölD         |\n|   SárgA             PiroS=PiroS             ZöölD=PiroS             SárgA   |\n|   PiroS             ZöölD=ZöölD             SárgA=SárgA             ZöölD   |\n|         KéééK,SárgA      |      KéééK,PiroS      |      KéééK,PiroS         |\n--------------||----------------------||----------------------||---------------\n|         KéééK,SárgA      |      KéééK,PiroS      |      KéééK,ZöölD         |\n|   SárgA             ZöölD=ZöölD             ZöölD=ZöölD             SárgA   |\n|   PiroS             PiroS=PiroS             SárgA=PiroS             PiroS   |\n|         ZöölD,KéééK      |      SárgA,KéééK      |      SárgA,KéééK         |\n--------------||----------------------||----------------------||---------------\n|         ZöölD,KéééK      |      SárgA,KéééK      |      ZöölD,SárgA         |\n|   PiroS             PiroS=KéééK             PiroS=KéééK             PiroS   |\n|   KéééK             SárgA=ZöölD             ZöölD=PiroS             SárgA   |\n|         SárgA,ZöölD      |      PiroS,SárgA      |      ZöölD,KéééK         |\n-------------------------------------------------------------------------------\n",
+  "tableMap": {
+    "1": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "ZOLD"
+      },
+      "2": {
+        "leftColor": "PIROS",
+        "rightColor": "ZOLD"
+      },
+      "3": {
+        "leftColor": "SARGA",
+        "rightColor": "KEK"
+      },
+      "4": {
+        "leftColor": "PIROS",
+        "rightColor": "SARGA"
+      }
+    },
+    "2": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "SARGA"
+      },
+      "2": {
+        "leftColor": "ZOLD",
+        "rightColor": "SARGA"
+      },
+      "3": {
+        "leftColor": "PIROS",
+        "rightColor": "KEK"
+      },
+      "4": {
+        "leftColor": "ZOLD",
+        "rightColor": "PIROS"
+      }
+    },
+    "3": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "ZOLD"
+      },
+      "2": {
+        "leftColor": "SARGA",
+        "rightColor": "ZOLD"
+      },
+      "3": {
+        "leftColor": "PIROS",
+        "rightColor": "KEK"
+      },
+      "4": {
+        "leftColor": "SARGA",
+        "rightColor": "PIROS"
+      }
+    },
+    "4": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "SARGA"
+      },
+      "2": {
+        "leftColor": "ZOLD",
+        "rightColor": "PIROS"
+      },
+      "3": {
+        "leftColor": "KEK",
+        "rightColor": "ZOLD"
+      },
+      "4": {
+        "leftColor": "PIROS",
+        "rightColor": "SARGA"
+      }
+    },
+    "5": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "PIROS"
+      },
+      "2": {
+        "leftColor": "ZOLD",
+        "rightColor": "SARGA"
+      },
+      "3": {
+        "leftColor": "KEK",
+        "rightColor": "SARGA"
+      },
+      "4": {
+        "leftColor": "PIROS",
+        "rightColor": "ZOLD"
+      }
+    },
+    "6": {
+      "1": {
+        "leftColor": "KEK",
+        "rightColor": "ZOLD"
+      },
+      "2": {
+        "leftColor": "SARGA",
+        "rightColor": "PIROS"
+      },
+      "3": {
+        "leftColor": "KEK",
+        "rightColor": "SARGA"
+      },
+      "4": {
+        "leftColor": "PIROS",
+        "rightColor": "ZOLD"
+      }
+    },
+    "7": {
+      "1": {
+        "leftColor": "ZOLD",
+        "rightColor": "KEK"
+      },
+      "2": {
+        "leftColor": "PIROS",
+        "rightColor": "SARGA"
+      },
+      "3": {
+        "leftColor": "ZOLD",
+        "rightColor": "SARGA"
+      },
+      "4": {
+        "leftColor": "KEK",
+        "rightColor": "PIROS"
+      }
+    },
+    "8": {
+      "1": {
+        "leftColor": "SARGA",
+        "rightColor": "KEK"
+      },
+      "2": {
+        "leftColor": "PIROS",
+        "rightColor": "ZOLD"
+      },
+      "3": {
+        "leftColor": "SARGA",
+        "rightColor": "PIROS"
+      },
+      "4": {
+        "leftColor": "ZOLD",
+        "rightColor": "KEK"
+      }
+    },
+    "9": {
+      "1": {
+        "leftColor": "ZOLD",
+        "rightColor": "SARGA"
+      },
+      "2": {
+        "leftColor": "PIROS",
+        "rightColor": "SARGA"
+      },
+      "3": {
+        "leftColor": "KEK",
+        "rightColor": "ZOLD"
+      },
+      "4": {
+        "leftColor": "PIROS",
+        "rightColor": "KEK"
+      }
+    }
+  }
+}

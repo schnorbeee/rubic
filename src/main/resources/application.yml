@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: rubic-chip
+
+logging:
+  level:
+    root: INFO
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+  packages-to-scan: hu.sch.rubicchip
+  swagger-ui:
+    config-url: /v3/api-docs/swagger-config
+    url: /v3/api-docs
+
+openapi:
+  info:
+    title: OpenApi rubic
+    version: 1.0.0-SNAPSHOT
+  servers:
+    url: http://localhost:8080
+    description: Rubic service document

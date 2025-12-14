@@ -1,0 +1,284 @@
+openapi: 3.1.0
+info:
+  title: OpenApi rubic
+  version: 1.0.0-SNAPSHOT
+servers:
+- url: http://localhost:8080
+  description: Rubic service document
+paths:
+  /api/rubics:
+    put:
+      tags:
+      - chip-controller
+      summary: Shuffle table
+      operationId: shufflePositionAndOrientation
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChipsTableResponse"
+        "400":
+          description: "Runtime error: HttpStatus.BAD_REQUEST"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+        "500":
+          description: "Fatal error: HttpStatus.INTERNAL_SERVER_ERROR"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+    post:
+      tags:
+      - chip-controller
+      summary: Start game
+      operationId: startGame
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChipsRequest"
+        required: true
+      responses:
+        "201":
+          description: CREATED
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChipsTableResponse"
+        "400":
+          description: "Runtime error: HttpStatus.BAD_REQUEST"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+        "500":
+          description: "Fatal error: HttpStatus.INTERNAL_SERVER_ERROR"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+  /api/rubics/solve:
+    put:
+      tags:
+      - chip-controller
+      summary: Solve rubic
+      operationId: solveRubic
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChipsTableResponse"
+        "400":
+          description: "Runtime error: HttpStatus.BAD_REQUEST"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+        "500":
+          description: "Fatal error: HttpStatus.INTERNAL_SERVER_ERROR"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+components:
+  schemas:
+    ChipSide:
+      type: object
+      description: ChipSide required component
+      properties:
+        leftColor:
+          type: string
+          description: leftColor required field
+          enum:
+          - KEK
+          - ZOLD
+          - PIROS
+          - SARGA
+        rightColor:
+          type: string
+          description: rightColor required field
+          enum:
+          - KEK
+          - ZOLD
+          - PIROS
+          - SARGA
+    ChipsTableResponse:
+      type: object
+      description: Chips Table response
+      properties:
+        gameId:
+          type: integer
+          format: int64
+          description: gameId required field
+        table:
+          type: string
+          description: table required field
+          minLength: 1
+        tableMap:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties:
+              $ref: "#/components/schemas/ChipSide"
+          description: tableMap required field
+      required:
+      - gameId
+      - table
+      - tableMap
+    ExceptionResponse:
+      type: object
+      description: Error response
+      properties:
+        statusCode:
+          type: string
+          description: statusCode
+          enum:
+          - 100 CONTINUE
+          - 101 SWITCHING_PROTOCOLS
+          - 102 PROCESSING
+          - 103 EARLY_HINTS
+          - 103 CHECKPOINT
+          - 200 OK
+          - 201 CREATED
+          - 202 ACCEPTED
+          - 203 NON_AUTHORITATIVE_INFORMATION
+          - 204 NO_CONTENT
+          - 205 RESET_CONTENT
+          - 206 PARTIAL_CONTENT
+          - 207 MULTI_STATUS
+          - 208 ALREADY_REPORTED
+          - 226 IM_USED
+          - 300 MULTIPLE_CHOICES
+          - 301 MOVED_PERMANENTLY
+          - 302 FOUND
+          - 302 MOVED_TEMPORARILY
+          - 303 SEE_OTHER
+          - 304 NOT_MODIFIED
+          - 305 USE_PROXY
+          - 307 TEMPORARY_REDIRECT
+          - 308 PERMANENT_REDIRECT
+          - 400 BAD_REQUEST
+          - 401 UNAUTHORIZED
+          - 402 PAYMENT_REQUIRED
+          - 403 FORBIDDEN
+          - 404 NOT_FOUND
+          - 405 METHOD_NOT_ALLOWED
+          - 406 NOT_ACCEPTABLE
+          - 407 PROXY_AUTHENTICATION_REQUIRED
+          - 408 REQUEST_TIMEOUT
+          - 409 CONFLICT
+          - 410 GONE
+          - 411 LENGTH_REQUIRED
+          - 412 PRECONDITION_FAILED
+          - 413 PAYLOAD_TOO_LARGE
+          - 413 REQUEST_ENTITY_TOO_LARGE
+          - 414 URI_TOO_LONG
+          - 414 REQUEST_URI_TOO_LONG
+          - 415 UNSUPPORTED_MEDIA_TYPE
+          - 416 REQUESTED_RANGE_NOT_SATISFIABLE
+          - 417 EXPECTATION_FAILED
+          - 418 I_AM_A_TEAPOT
+          - 419 INSUFFICIENT_SPACE_ON_RESOURCE
+          - 420 METHOD_FAILURE
+          - 421 DESTINATION_LOCKED
+          - 422 UNPROCESSABLE_ENTITY
+          - 423 LOCKED
+          - 424 FAILED_DEPENDENCY
+          - 425 TOO_EARLY
+          - 426 UPGRADE_REQUIRED
+          - 428 PRECONDITION_REQUIRED
+          - 429 TOO_MANY_REQUESTS
+          - 431 REQUEST_HEADER_FIELDS_TOO_LARGE
+          - 451 UNAVAILABLE_FOR_LEGAL_REASONS
+          - 500 INTERNAL_SERVER_ERROR
+          - 501 NOT_IMPLEMENTED
+          - 502 BAD_GATEWAY
+          - 503 SERVICE_UNAVAILABLE
+          - 504 GATEWAY_TIMEOUT
+          - 505 HTTP_VERSION_NOT_SUPPORTED
+          - 506 VARIANT_ALSO_NEGOTIATES
+          - 507 INSUFFICIENT_STORAGE
+          - 508 LOOP_DETECTED
+          - 509 BANDWIDTH_LIMIT_EXCEEDED
+          - 510 NOT_EXTENDED
+          - 511 NETWORK_AUTHENTICATION_REQUIRED
+          examples:
+          - "400"
+          - "500"
+        message:
+          type: string
+          description: message
+        detail:
+          type: string
+          description: detail
+    ChipsRequest:
+      type: object
+      description: Chips request
+      properties:
+        firstChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: firstChipSides required field
+        secondChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: secondChipSides required field
+        thirdChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: thirdChipSides required field
+        fourthChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: fourthChipSides required field
+        fifthChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: fifthChipSides required field
+        sixthChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: sixthChipSides required field
+        seventhChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: seventhChipSides required field
+        eighthChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: eighthChipSides required field
+        ninthChipSides:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/ChipSide"
+          description: ninthChipSides required field
+      required:
+      - eighthChipSides
+      - fifthChipSides
+      - firstChipSides
+      - fourthChipSides
+      - ninthChipSides
+      - secondChipSides
+      - seventhChipSides
+      - sixthChipSides
+      - thirdChipSides

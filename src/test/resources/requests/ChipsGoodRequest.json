@@ -1,0 +1,164 @@
+{
+  "firstChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
+    "2": {
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
+    },
+    "3": {
+      "leftColor": "SARGA",
+      "rightColor": "KEK"
+    },
+    "4": {
+      "leftColor": "PIROS",
+      "rightColor": "SARGA"
+    }
+  },
+  "secondChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "SARGA"
+    },
+    "2": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
+    "3": {
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
+    },
+    "4": {
+      "leftColor": "ZOLD",
+      "rightColor": "PIROS"
+    }
+  },
+  "thirdChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
+    "2": {
+      "leftColor": "SARGA",
+      "rightColor": "ZOLD"
+    },
+    "3": {
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
+    },
+    "4": {
+      "leftColor": "SARGA",
+      "rightColor": "PIROS"
+    }
+  },
+  "fourthChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "SARGA"
+    },
+    "2": {
+      "leftColor": "ZOLD",
+      "rightColor": "PIROS"
+    },
+    "3": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
+    "4": {
+      "leftColor": "PIROS",
+      "rightColor": "SARGA"
+    }
+  },
+  "fifthChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "PIROS"
+    },
+    "2": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
+    "3": {
+      "leftColor": "KEK",
+      "rightColor": "SARGA"
+    },
+    "4": {
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
+    }
+  },
+  "sixthChipSides": {
+    "1": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
+    "2": {
+      "leftColor": "SARGA",
+      "rightColor": "PIROS"
+    },
+    "3": {
+      "leftColor": "KEK",
+      "rightColor": "SARGA"
+    },
+    "4": {
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
+    }
+  },
+  "seventhChipSides": {
+    "1": {
+      "leftColor": "ZOLD",
+      "rightColor": "KEK"
+    },
+    "2": {
+      "leftColor": "PIROS",
+      "rightColor": "SARGA"
+    },
+    "3": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
+    "4": {
+      "leftColor": "KEK",
+      "rightColor": "PIROS"
+    }
+  },
+  "eighthChipSides": {
+    "1": {
+      "leftColor": "SARGA",
+      "rightColor": "KEK"
+    },
+    "2": {
+      "leftColor": "PIROS",
+      "rightColor": "ZOLD"
+    },
+    "3": {
+      "leftColor": "SARGA",
+      "rightColor": "PIROS"
+    },
+    "4": {
+      "leftColor": "ZOLD",
+      "rightColor": "KEK"
+    }
+  },
+  "ninthChipSides": {
+    "1": {
+      "leftColor": "ZOLD",
+      "rightColor": "SARGA"
+    },
+    "2": {
+      "leftColor": "PIROS",
+      "rightColor": "SARGA"
+    },
+    "3": {
+      "leftColor": "KEK",
+      "rightColor": "ZOLD"
+    },
+    "4": {
+      "leftColor": "PIROS",
+      "rightColor": "KEK"
+    }
+  }
+}
