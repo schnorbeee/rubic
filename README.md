@@ -51,4 +51,27 @@ Swagger-ui url what you can reach out if you run the application:
 
 http://localhost:8080/swagger-ui/index.html
 
+### For heuristic performance boost
+
+    Initial estimates for heuristics
+                             sides:  1.	    2.	    3.	    4.
+              chips:   1. 	        S, K	P, K	Z, S	P, Z
+                       2.            Z, P	S, K	Z, S	K, P
+                       3.	        P, Z	K, P	Z, S	K, S
+                       4.	        S, Z	K, P 	S, P	Z, K
+                       5.	        S, Z	P, Z	K, S	P, K
+                       6.	        S, Z	P, K	S, K	Z, P
+                       7.	        P, S	K, Z	P, K	Z, S
+                       8.	        S, K	P, Z	S, P	Z, K
+                       9.	        K, S	Z, K	S, P	Z, P
+
+      Possible number of pages and index of chips (occurrence) in parentheses
+        Critical connection: S, P && P, S és Z, K && K, Z
+              S, K = 4 (1, 2, 6, 8)       &&      K, S = 3 (3, 5, 9)
+              P, K = 4 (1, 5, 6, 7)       &&      K, P = 3 (2, 3, 4)
+              Z, S = 4 (1, 2, 3, 7)       &&      S, Z = 3 (4, 5, 6)
+              P, Z = 4 (1, 3, 5, 8)       &&      Z, P = 3 (2, 6, 9)
+              S, P = 3 (4, 8, 9)          &&      P, S = 1 (7)
+              Z, K = 3 (4, 8, 9)          &&      K, Z = 1 (7)
+
 I hope it will be fine.

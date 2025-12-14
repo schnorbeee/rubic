@@ -19,11 +19,11 @@ public class HeuristicsServiceImpl extends GeneralChipManipulator implements Heu
 
         Map<Integer, ChipSide> thisChip = fullTableMap.get(chipId);
 
-        for (Integer otherId : fullTableMap.keySet()) {
-            if (otherId.equals(chipId)) {
+        for (Map.Entry<Integer, Map<Integer, ChipSide>> entry : fullTableMap.entrySet()) {
+            if (entry.getKey().equals(chipId)) {
                 continue;
             }
-            Map<Integer, ChipSide> otherChip = fullTableMap.get(otherId);
+            Map<Integer, ChipSide> otherChip = fullTableMap.get(entry.getKey());
             if (canConnect(thisChip, otherChip)) {
                 count++;
             }
