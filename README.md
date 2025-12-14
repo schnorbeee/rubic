@@ -76,8 +76,7 @@ http://localhost:8080/swagger-ui/index.html
 
 ### Sonar qube results
 
-![img.png](img.png)
+![img_2.png](img_2.png)
 
-![img_1.png](img_1.png)
-
+![img_5.png](img_5.png)
 I hope it will be fine.
