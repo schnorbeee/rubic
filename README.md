@@ -56,7 +56,7 @@ http://localhost:8080/swagger-ui/index.html
     Initial estimates for heuristics
                              sides:  1.	    2.	    3.	    4.
               chips:   1. 	        S, K	P, K	Z, S	P, Z
-                       2.            Z, P	S, K	Z, S	K, P
+                       2.           Z, P	S, K	Z, S	K, P
                        3.	        P, Z	K, P	Z, S	K, S
                        4.	        S, Z	K, P 	S, P	Z, K
                        5.	        S, Z	P, Z	K, S	P, K
@@ -74,9 +74,14 @@ http://localhost:8080/swagger-ui/index.html
               S, P = 3 (4, 8, 9)          &&      P, S = 1 (7)
               Z, K = 3 (4, 8, 9)          &&      K, Z = 1 (7)
 
+### Valid rubic chips
+
+![img_1.png](img_6.png)
+
 ### Sonar qube results
 
 ![img_2.png](img_2.png)
 
 ![img_5.png](img_5.png)
+
 I hope it will be fine.
