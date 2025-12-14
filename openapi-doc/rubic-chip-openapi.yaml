@@ -27,6 +27,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ExceptionResponse"
+        "412":
+          description: "Precondition Failed: HttpStatus.PRECONDITION_FAILED"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
         "500":
           description: "Fatal error: HttpStatus.INTERNAL_SERVER_ERROR"
           content:
@@ -82,6 +88,18 @@ paths:
                   $ref: "#/components/schemas/ChipsTableResponse"
         "400":
           description: "Runtime error: HttpStatus.BAD_REQUEST"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+        "412":
+          description: "Precondition Failed: HttpStatus.PRECONDITION_FAILED"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExceptionResponse"
+        "417":
+          description: "Expectation Failed: HttpStatus.EXPECTATION_FAILED"
           content:
             application/json:
               schema:
