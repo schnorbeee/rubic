@@ -1,0 +1,5 @@
+{
+  "statusCode": "EXPECTATION_FAILED",
+  "message": "NO SOLUTION.",
+  "detail": "Location: Fatal :: ResolverServiceImpl :: solve"
+}

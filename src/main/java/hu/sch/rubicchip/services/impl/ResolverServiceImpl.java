@@ -1,5 +1,6 @@
 package hu.sch.rubicchip.services.impl;
 
+import hu.sch.rubicchip.exceptions.UnresolvableException;
 import hu.sch.rubicchip.services.HeuristicsService;
 import hu.sch.rubicchip.services.ResolverService;
 import hu.sch.rubicchip.services.impl.shared.GeneralChipManipulator;
@@ -35,9 +36,10 @@ public class ResolverServiceImpl extends GeneralChipManipulator implements Resol
 
         if (solveBoard(0, placement, chipIds, fullTableMap)) {
             applySolution(placement, fullTableMap);
-            log.info("MEGTALÁLT MEGOLDÁS:");
+            log.info("SOLUTION FOUND:");
         } else {
-            log.info("NINCS MEGOLDÁS.");
+            log.info("NO SOLUTION.");
+            throw new UnresolvableException("NO SOLUTION.");
         }
     }
 

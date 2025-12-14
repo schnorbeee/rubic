@@ -1,0 +1,5 @@
+{
+  "statusCode": "PRECONDITION_FAILED",
+  "message": "Did not start the game, first call Start game POST operation!",
+  "detail": "Location: Fatal :: ChipServiceImpl :: solveRubic"
+}

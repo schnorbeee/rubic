@@ -1,5 +1,5 @@
 {
-  "gameId": 3,
+  "gameId": 2,
   "table": "-------------------------------------------------------------------------------\n|         KéééK,ZöölD      |      KéééK,SárgA      |      KéééK,ZöölD         |\n|   SárgA             PiroS=PiroS             ZöölD=PiroS             SárgA   |\n|   PiroS             ZöölD=ZöölD             SárgA=SárgA             ZöölD   |\n|         KéééK,SárgA      |      KéééK,PiroS      |      KéééK,PiroS         |\n--------------||----------------------||----------------------||---------------\n|         KéééK,SárgA      |      KéééK,PiroS      |      KéééK,ZöölD         |\n|   SárgA             ZöölD=ZöölD             ZöölD=ZöölD             SárgA   |\n|   PiroS             PiroS=PiroS             SárgA=PiroS             PiroS   |\n|         ZöölD,KéééK      |      SárgA,KéééK      |      SárgA,KéééK         |\n--------------||----------------------||----------------------||---------------\n|         ZöölD,KéééK      |      SárgA,KéééK      |      ZöölD,SárgA         |\n|   PiroS             PiroS=KéééK             PiroS=KéééK             PiroS   |\n|   KéééK             SárgA=ZöölD             ZöölD=PiroS             SárgA   |\n|         SárgA,ZöölD      |      PiroS,SárgA      |      ZöölD,KéééK         |\n-------------------------------------------------------------------------------\n",
   "tableMap": {
     "1": {

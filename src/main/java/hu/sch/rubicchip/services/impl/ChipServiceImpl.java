@@ -2,12 +2,14 @@ package hu.sch.rubicchip.services.impl;
 
 import hu.sch.rubicchip.dtos.ChipsRequest;
 import hu.sch.rubicchip.dtos.ChipsTableResponse;
+import hu.sch.rubicchip.exceptions.UninitializedStateException;
 import hu.sch.rubicchip.mappers.ChipMapper;
 import hu.sch.rubicchip.services.ChipService;
 import hu.sch.rubicchip.services.DrawTableService;
 import hu.sch.rubicchip.services.MixerService;
 import hu.sch.rubicchip.services.ResolverService;
 import hu.sch.rubicchip.utils.ChipSide;
+import jakarta.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +32,8 @@ public class ChipServiceImpl implements ChipService {
     private final DrawTableService drawTableService;
 
     private static final Map<Integer, Map<Integer, ChipSide>> FULL_TABLE_WITH_ORIENTATION = new ConcurrentHashMap<>();
+
+    private static final String FIRST_START_GAME_MESSAGE = "Did not start the game, first call Start game POST operation!";
 
     private static Long gameId = 0L;
 
@@ -54,6 +58,10 @@ public class ChipServiceImpl implements ChipService {
 
     @Override
     public ResponseEntity<ChipsTableResponse> shufflePositionAndOrientation() {
+        if (FULL_TABLE_WITH_ORIENTATION.isEmpty()) {
+            throw new UninitializedStateException(FIRST_START_GAME_MESSAGE);
+        }
+
         mixerService.setRandomPosition(FULL_TABLE_WITH_ORIENTATION);
         mixerService.shuffleOrientations(FULL_TABLE_WITH_ORIENTATION);
 
@@ -64,6 +72,10 @@ public class ChipServiceImpl implements ChipService {
 
     @Override
     public ResponseEntity<ChipsTableResponse> solveRubic() {
+        if (FULL_TABLE_WITH_ORIENTATION.isEmpty()) {
+            throw new UninitializedStateException(FIRST_START_GAME_MESSAGE);
+        }
+
         resolverService.solve(FULL_TABLE_WITH_ORIENTATION);
 
         log.info("SolveRubic");
@@ -82,5 +94,10 @@ public class ChipServiceImpl implements ChipService {
         FULL_TABLE_WITH_ORIENTATION.put(7, chipsRequest.getSeventhChipSides());
         FULL_TABLE_WITH_ORIENTATION.put(8, chipsRequest.getEighthChipSides());
         FULL_TABLE_WITH_ORIENTATION.put(9, chipsRequest.getNinthChipSides());
+    }
+
+    @PreDestroy
+    public void clearMemory() {
+        FULL_TABLE_WITH_ORIENTATION.clear();
     }
 }
